@@ -12,7 +12,8 @@ import java.util.Collections
  */
 class SingleValueToCollectionMapper : MapperImpl()
 {
-	override fun createCollection(context: MappingContext, value: Any): Collection<*>?
+
+	override fun createCollection(context: MappingContext, value: Any?): Collection<*>?
 	{
 		if (value !is Iterable<*>)
 		{

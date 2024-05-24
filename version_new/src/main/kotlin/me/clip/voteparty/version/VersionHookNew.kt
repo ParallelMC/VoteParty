@@ -72,25 +72,24 @@ class VersionHookNew : VersionHook
 		private val OPTION = DustOptions(Color.RED, 0.8F)
 		
 		private val SPELLS = setOf(
-			Particle.SPELL_MOB,
-			Particle.SPELL_MOB_AMBIENT
+			Particle.EFFECT,
+			Particle.ENTITY_EFFECT
 		                          )
 		
 		private val SINGLE = setOf(
-			Particle.WATER_BUBBLE,
-			Particle.WATER_WAKE,
+			Particle.BUBBLE,
+			Particle.FISHING,
 			Particle.CRIT,
-			Particle.CRIT_MAGIC,
-			Particle.SMOKE_NORMAL,
-			Particle.SMOKE_LARGE,
+			Particle.SMOKE,
+			Particle.LARGE_SMOKE,
 			Particle.PORTAL,
-			Particle.ENCHANTMENT_TABLE,
+			Particle.ENCHANT,
 			Particle.FLAME,
 			Particle.CLOUD,
 			Particle.DRAGON_BREATH,
 			Particle.END_ROD,
 			Particle.DAMAGE_INDICATOR,
-			Particle.TOTEM,
+			Particle.TOTEM_OF_UNDYING,
 			Particle.SPIT,
 			Particle.SQUID_INK,
 			Particle.BUBBLE_POP,
