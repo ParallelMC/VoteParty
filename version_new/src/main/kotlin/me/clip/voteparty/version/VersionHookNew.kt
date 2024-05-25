@@ -27,24 +27,9 @@ class VersionHookNew : VersionHook
 			}
 			in SPELLS     ->
 			{
-				val r: Double
-				val g: Double
-				val b: Double
-				
-				if (color == null)
-				{
-					r = 0.0
-					g = 0.0
-					b = 0.0
-				}
-				else
-				{
-					r = color.red / 255.0
-					g = color.green / 255.0
-					b = color.blue / 255.0
-				}
-				
-				world.spawnParticle(particle, location, count, r, g, b, 1)
+				val tempColor: Color = color ?: Color.fromRGB(0, 0, 0)
+
+				world.spawnParticle(particle, location, count, offsetX, offsetY, offsetZ, tempColor)
 			}
 			Particle.NOTE ->
 			{
@@ -57,7 +42,7 @@ class VersionHookNew : VersionHook
 					color.red / 24.0
 				}
 				
-				world.spawnParticle(particle, location, count, note, offsetY, offsetZ, 1)
+				world.spawnParticle(particle, location, count, offsetX, offsetY, offsetZ, note)
 			}
 			else          ->
 			{
@@ -72,7 +57,6 @@ class VersionHookNew : VersionHook
 		private val OPTION = DustOptions(Color.RED, 0.8F)
 		
 		private val SPELLS = setOf(
-			Particle.EFFECT,
 			Particle.ENTITY_EFFECT
 		                          )
 		
