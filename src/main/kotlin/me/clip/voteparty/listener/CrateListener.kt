@@ -30,24 +30,11 @@ internal class CrateListener(override val plugin: VotePartyPlugin) : VotePartyLi
 		val held = player.inventory.itemInMainHand
 		val item = party.partyHandler.buildCrate(1)
 
-
-		if (held.type != item.type) {
-			return
-		}
-
-		val heldMeta: ItemMeta? = held.itemMeta
-		val itemMeta: ItemMeta? = item.itemMeta
-
-		//if (!held.isSimilar(item))
-		if (heldMeta == null || itemMeta == null)
+		if (!held.isSimilar(item))
 		{
 			return
 		}
 
-		if (heldMeta.name != itemMeta.name || heldMeta.lore != itemMeta.lore) {
-			return
-		}
-		
 		if (player.world.name in party.conf().getProperty(PartySettings.DISABLED_WORLDS))
 		{
 			return

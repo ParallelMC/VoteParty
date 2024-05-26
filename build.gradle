@@ -10,7 +10,7 @@ allprojects {
 
 	archivesBaseName = 'VoteParty'
 	group 'me.clip'
-	version '2.35-DEV-Parallel'
+	version '2.36-DEV-Parallel'
 
 	java {
 		toolchain.languageVersion.set(JavaLanguageVersion.of(21))
