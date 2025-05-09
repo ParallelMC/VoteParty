@@ -2,5 +2,5 @@ dependencies {
 	implementation project(':version')
 }
 group 'me.clip'
-version '2.35-DEV-Parallel'
+version '2.37-DEV-Parallel'
 

@@ -10,7 +10,7 @@ allprojects {
 
 	archivesBaseName = 'VoteParty'
 	group 'me.clip'
-	version '2.36-DEV-Parallel'
+	version '2.37-DEV-Parallel'
 
 	java {
 		toolchain.languageVersion.set(JavaLanguageVersion.of(21))
@@ -35,7 +35,7 @@ allprojects {
 		implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
 
 		// spigot
-		compileOnly "org.spigotmc:spigot-api:1.20.6-R0.1-SNAPSHOT"
+		compileOnly "org.spigotmc:spigot-api:1.21.5-R0.1-SNAPSHOT"
 	}
 
 	sourceCompatibility = 21
@@ -85,9 +85,9 @@ dependencies {
 	implementation 'com.github.cryptomorin:XSeries:10.0.0'
 
 	// json stuff
-	implementation 'net.kyori:adventure-platform-bukkit:4.1.1'
-	implementation 'net.kyori:adventure-api:4.11.0'
-	implementation 'net.kyori:adventure-text-minimessage:4.11.0'
+	implementation 'net.kyori:adventure-platform-bukkit:4.3.4'
+	implementation 'net.kyori:adventure-api:4.20.0'
+	implementation 'net.kyori:adventure-text-minimessage:4.20.0'
 	implementation project(':version')
 
 	implementation project(":version_new")
